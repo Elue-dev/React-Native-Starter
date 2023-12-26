@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   BottomTabNavigationOptions,
   createBottomTabNavigator,
@@ -7,12 +6,12 @@ import { RoutePropArg, TabStackParamList } from "../types/navigation";
 import {
   MaterialCommunityIcons,
   AntDesign,
-  FontAwesome,
   Ionicons,
-  Entypo,
 } from "@expo/vector-icons";
-import { Platform, StyleSheet, View } from "react-native";
-import TestScreen from "../screens/TestScreen";
+import { Platform, StyleSheet } from "react-native";
+import TabOne from "../screens/tab_screens/TabOne";
+import TabTwo from "../screens/tab_screens/TabTwo";
+import TabThree from "../screens/tab_screens/TabThree";
 
 const TabStack = createBottomTabNavigator<TabStackParamList>();
 
@@ -25,7 +24,7 @@ export default function TabsNavigator() {
     return {
       tabBarIcon: ({ focused, size }) => {
         switch (route.name) {
-          case "News":
+          case "TabOne":
             return (
               <Ionicons
                 name="newspaper-outline"
@@ -34,7 +33,7 @@ export default function TabsNavigator() {
                 style={styles.tabBarIcon}
               />
             );
-          case "Verify":
+          case "TabTwo":
             return (
               <MaterialCommunityIcons
                 name="newspaper-check"
@@ -43,38 +42,10 @@ export default function TabsNavigator() {
                 style={styles.tabBarIconSec}
               />
             );
-          case "Search":
+          case "TabThree":
             return (
               <AntDesign
                 name="search1"
-                size={size}
-                color={focused ? colorToUse : "#AEAEB2"}
-                style={styles.tabBarIcon}
-              />
-            );
-          case "AddNews":
-            return (
-              <Entypo
-                name="add-to-list"
-                size={size + 2}
-                color={focused ? colorToUse : "#AEAEB2"}
-                style={styles.tabBarIconSec}
-              />
-            );
-
-          case "Profile":
-            return (
-              <FontAwesome
-                name="user-o"
-                size={size - 10}
-                color={focused ? colorToUse : "#AEAEB2"}
-                style={styles.tabBarIcon}
-              />
-            );
-          case "More":
-            return (
-              <Entypo
-                name="dots-three-vertical"
                 size={size}
                 color={focused ? colorToUse : "#AEAEB2"}
                 style={styles.tabBarIcon}
@@ -110,8 +81,24 @@ export default function TabsNavigator() {
       })}
     >
       <TabStack.Screen
-        name="News"
-        component={TestScreen}
+        name="TabOne"
+        component={TabOne}
+        options={{
+          headerShown: true,
+          headerTitleAlign: "center",
+        }}
+      />
+      <TabStack.Screen
+        name="TabTwo"
+        component={TabTwo}
+        options={{
+          headerShown: true,
+          headerTitleAlign: "center",
+        }}
+      />
+      <TabStack.Screen
+        name="TabThree"
+        component={TabThree}
         options={{
           headerShown: true,
           headerTitleAlign: "center",

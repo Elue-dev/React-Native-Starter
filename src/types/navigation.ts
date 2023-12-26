@@ -8,7 +8,11 @@ export type RootStackParamList = {
   Onboarding: undefined;
 };
 
-export type TabStackParamList = {};
+export type TabStackParamList = {
+  TabOne: undefined;
+  TabTwo: undefined;
+  TabThree: undefined;
+};
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =
   NativeStackScreenProps<RootStackParamList, T>;

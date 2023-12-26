@@ -1,15 +1,15 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../types/navigation";
-import TestScreen from "../screens/TestScreen";
+import TabsNavigator from "./TabNavigator";
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
-export default function RouteNavigator() {
+export default function RootNavigator() {
   return (
     <RootStack.Navigator initialRouteName={"TabStack"}>
       <RootStack.Screen
         name="TabStack"
-        component={TestScreen}
+        component={TabsNavigator}
         options={{
           headerShown: false,
         }}
