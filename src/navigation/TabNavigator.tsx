@@ -26,17 +26,17 @@ export default function TabsNavigator() {
         switch (route.name) {
           case "TabOne":
             return (
-              <Ionicons
-                name="newspaper-outline"
-                size={size - 5}
+              <MaterialCommunityIcons
+                name="menu-up"
+                size={size}
                 color={focused ? colorToUse : "#AEAEB2"}
-                style={styles.tabBarIcon}
+                style={styles.tabBarIconSec}
               />
             );
           case "TabTwo":
             return (
               <MaterialCommunityIcons
-                name="newspaper-check"
+                name="menu-up"
                 size={size}
                 color={focused ? colorToUse : "#AEAEB2"}
                 style={styles.tabBarIconSec}
@@ -44,11 +44,11 @@ export default function TabsNavigator() {
             );
           case "TabThree":
             return (
-              <AntDesign
-                name="search1"
+              <MaterialCommunityIcons
+                name="menu-up"
                 size={size}
                 color={focused ? colorToUse : "#AEAEB2"}
-                style={styles.tabBarIcon}
+                style={styles.tabBarIconSec}
               />
             );
           default:
