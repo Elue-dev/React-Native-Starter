@@ -10,7 +10,7 @@ npm uninstall dependency-name
 
 - Expo
 - TypeScript
-- Navigations (also with Tab Navigations). Types for this are also defined in the [`navigation.ts` file in the types folder](types/navigation.ts).
+- Navigations (also with Tab Navigations). Types for this are also defined in the [`navigation.ts` file in the types folder](src/types/navigation.ts).
 
 - Nativewind / Tailwind. Ofcourse, you can decide to use the StyleSheet API and completely remove tailwind. (remember to remove the `app.d.ts` if you are removing tailwind from the project).
 - SVG Support. You can use SVGs in your app to replace pngs in certain parts of your app. It utilizes the `react-native-svg-transformer` library.
